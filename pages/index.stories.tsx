@@ -34,8 +34,8 @@ export const Loading = {
             handlers: [
               rest.get('http://localhost:3000/api/profiles', (req, res, ctx) => {
                 return res(
-                  ctx.delay(1000 * 3),
-                  ctx.json([
+                    ctx.delay('infinite'),                  
+                    ctx.json([
                     {
                       id: "1",
                       fullName: "DR. MSW",
