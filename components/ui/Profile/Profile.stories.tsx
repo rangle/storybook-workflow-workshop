@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { Profile } from './profile';
 
-import { {{properCase name }} } from './{{kebabCase name}}';
 
 export default {
-  title: 'Components/{{properCase name}}',
-  component: {{ properCase name }},
+  title: 'Modules/Profile',
+  component: Profile,
   parameters: {
-    layout: 'centered',
     // https://storybookjs.github.io/addon-designs/?path=/story/docs-quick-start--page
     design: {
         type: "figma",
@@ -15,27 +14,31 @@ export default {
       },
     },
   tags: ['autodocs'],
-};
-
-type Story = StoryObj<typeof {{properCase name }}>;
-
-export const Primary: Story = {
   args: {
-    heading: 'My first heading!',
-  }
+    fullName: "Jane Doe",
+    location: "3 miles away",
+    description: "I'm a part-time dog walker in the North York area. Let me know if you need someone to walk your dog!",
+    editMode: true,
+  },
 };
 
-export const PrimaryOnDark: Story = {
-  ...Primary,
+type Story = StoryObj<typeof Profile>;
+
+export const Primary: Story = {};
+
+export const PrimaryOnDarkWithProfileImage: Story = {
   parameters: {
     backgrounds: {
       default: 'dark',
     },
   },
+  ...Primary.args,
+  args: {
+    profileImg: 'https://github.com/shadcn.png'
+  }
 };
 
-export const PrimaryOnBackground: Story = {
-  ...Primary,
+export const PrimaryOnBackgroundWithNoDescription: Story = {
   parameters: {
     backgrounds: {
       default: 'facebook',
@@ -45,6 +48,10 @@ export const PrimaryOnBackground: Story = {
       ],
     },
   },
+  args: {
+    location: "Toronto, ON",
+    description: "",
+  }
 };
 
 // https://storybook.js.org/docs/react/essentials/viewport
