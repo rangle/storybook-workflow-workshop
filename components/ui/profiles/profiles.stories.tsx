@@ -57,12 +57,6 @@ type Story = StoryObj<typeof Profiles>;
 
 export const Primary: Story = {};
 
-export const EmptyProfileList: Story = {
-  args: {
-    profiles: [],
-  }
-};
-
 // https://storybook.js.org/docs/react/essentials/viewport
 export const PrimaryOnMobileViewport: Story = {
   ...Primary,
