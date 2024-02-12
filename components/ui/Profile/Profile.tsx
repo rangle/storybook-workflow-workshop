@@ -64,10 +64,10 @@ export const Profile = ({
       <CardContent className="text-gray-500">
       {description}
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex justify-center">
         {editMode && (
           <Button
-            variant="secondary"
+            data-testid="availability-toggle"
             onClick={() => setAvailability(!availability)}
           >
             {availabilityStatusEditMode}

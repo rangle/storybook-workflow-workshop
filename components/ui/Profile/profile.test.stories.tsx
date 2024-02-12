@@ -10,6 +10,7 @@ export default {
     fullName: "Jane Doe",
     location: "3 miles away",
     description: "I'm a part-time dog walker in the North York area. Let me know if you need someone to walk your dog!",
+    editMode: true,
   },
 };
 
@@ -21,7 +22,7 @@ export const SetProfileAvailable: Story = {
     // Click the button to set the profile to available
     await userEvent.click(canvas.getByTestId('availability-toggle'));
     await expect(canvas.getByTestId('availability-badge')).toHaveTextContent('Available');
-    await expect(canvas.getByTestId('availability-badge')).toHaveClass('bg-green-100')
+    await expect(canvas.getByTestId('availability-badge')).toHaveClass('bg-green-50 text-green-700')
     await expect(canvas.getByTestId('availability-toggle')).toHaveTextContent('Off the Clock');
   },
 };
