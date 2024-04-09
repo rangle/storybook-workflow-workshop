@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { Profile } from './profile';
+import { SitterProfile } from './sitter';
 
 
 export default {
-  title: 'Modules/Profile',
-  component: Profile,
+  title: 'Modules/Sitter Profile',
+  component: SitterProfile,
   parameters: {
     // https://storybookjs.github.io/addon-designs/?path=/story/docs-quick-start--page
     design: {
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-type Story = StoryObj<typeof Profile>;
+type Story = StoryObj<typeof SitterProfile>;
 
 export const Primary: Story = {};
 

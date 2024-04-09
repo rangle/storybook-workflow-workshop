@@ -1,11 +1,11 @@
 import { expect } from '@storybook/jest';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Profile } from './profile';
+import { SitterProfile } from './sitter';
 import { within, userEvent } from '@storybook/testing-library';
 
 export default {
   title: 'Interactive/Profile',
-  component: Profile,
+  component: SitterProfile,
   args: {
     fullName: "Jane Doe",
     location: "3 miles away",
@@ -14,7 +14,7 @@ export default {
   },
 };
 
-type Story = StoryObj<typeof Profile>;
+type Story = StoryObj<typeof SitterProfile>;
 
 export const SetProfileAvailable: Story = {
   play: async ({ args, canvasElement }) => {

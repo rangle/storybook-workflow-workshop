@@ -12,7 +12,7 @@ import { Badge } from "../badge/badge";
 import { Button } from "../button/button";
 import { MapPin } from 'lucide-react';
 
-export interface ProfileProps {
+export interface SitterProfileProps {
   id: string;
   profileImg?: string;
   fullName: string;
@@ -25,7 +25,7 @@ export interface ProfileProps {
 /**
  * the component description will be used in the storybook docs
  */
-export const Profile = ({
+export const SitterProfile = ({
   profileImg,
   fullName,
   location,
@@ -33,7 +33,7 @@ export const Profile = ({
   editMode,
   available,
   ...props
-}: ProfileProps) => {
+}: SitterProfileProps) => {
 
   const [availability, setAvailability] = useState(available);
 
