@@ -1,8 +1,8 @@
 import React from "react";
-import { Profile, ProfileProps } from "../profile/profile";
+import { SitterProfile, SitterProfileProps } from "../sitter";
 
 export interface ProfilesProps {
-  profiles: ProfileProps[] | undefined;
+  profiles: SitterProfileProps[] | undefined;
 }
 
 export const Profiles = ({ profiles, ...props }: ProfilesProps) => {
@@ -18,7 +18,7 @@ export const Profiles = ({ profiles, ...props }: ProfilesProps) => {
                 profiles.map((profile, index) => {
                   return (
                     <div key={index}>
-                      <Profile {...profile} />
+                      <SitterProfile {...profile} />
                     </div>
                   );
                 })}
